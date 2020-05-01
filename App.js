@@ -28,7 +28,7 @@ constructor(props){
 
   render() {
     return (
-      <SafeAreaView style={{flex:1}}>
+      <SafeAreaView style={{flex:1,backgroundColor:'#E9EAED'}}>
       <ScrollView style={{flex:1}}>
         <View style={styles.welcome}>
         <Text style={styles.header} >Login To my Application</Text>
