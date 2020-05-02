@@ -19,6 +19,9 @@
 		2DCD954D1E0B4F2C00145EB5 /* loginSignUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* loginSignUpTests.m */; };
 		32F33C1AC698763D2B86B6CC /* libPods-loginSignUp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E48EE0A23E6DA13E60393DED /* libPods-loginSignUp.a */; };
 		65D44208256289A5F064E83B /* libPods-loginSignUp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 500FCB7BCA6A224DEF1DCC80 /* libPods-loginSignUp-tvOS.a */; };
+		6D74D94B245D7C4600F81E4E /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D74D94A245D7C4600F81E4E /* Ionicons.ttf */; };
+		6D74D94D245D7C6100F81E4E /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D74D94C245D7C6100F81E4E /* MaterialIcons.ttf */; };
+		6D74D94F245D7D6C00F81E4E /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D74D94E245D7D6C00F81E4E /* libRNVectorIcons.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		E041D605565ECE39BDC6D2BB /* libPods-loginSignUp-loginSignUpTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F27C2A8EF55CCE0BF451411 /* libPods-loginSignUp-loginSignUpTests.a */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +39,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "loginSignUp-tvOS";
+		};
+		6D74D945245D7B4200F81E4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D74D940245D7B4200F81E4E /* RNVectorIcons.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5DBEB1501B18CEA900B34395;
+			remoteInfo = RNVectorIcons;
+		};
+		6D74D947245D7B4200F81E4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D74D940245D7B4200F81E4E /* RNVectorIcons.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A39873CE1EA65EE60051E01A;
+			remoteInfo = "RNVectorIcons-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -58,6 +75,10 @@
 		4D29738F83F2F4E7481DAE52 /* Pods-loginSignUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loginSignUp.release.xcconfig"; path = "Target Support Files/Pods-loginSignUp/Pods-loginSignUp.release.xcconfig"; sourceTree = "<group>"; };
 		500FCB7BCA6A224DEF1DCC80 /* libPods-loginSignUp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-loginSignUp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		538E5769B9CFC4B73566FFF1 /* libPods-loginSignUp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-loginSignUp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D74D940245D7B4200F81E4E /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
+		6D74D94A245D7C4600F81E4E /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		6D74D94C245D7C6100F81E4E /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		6D74D94E245D7D6C00F81E4E /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		82F57645AD208C0EB9056401 /* Pods-loginSignUp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loginSignUp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-loginSignUp-tvOSTests/Pods-loginSignUp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		B565B3BEA2D24CA241E15BA5 /* Pods-loginSignUp-loginSignUpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loginSignUp-loginSignUpTests.debug.xcconfig"; path = "Target Support Files/Pods-loginSignUp-loginSignUpTests/Pods-loginSignUp-loginSignUpTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BDC628BD0ED25A0AF9468CBB /* Pods-loginSignUp-loginSignUpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loginSignUp-loginSignUpTests.release.xcconfig"; path = "Target Support Files/Pods-loginSignUp-loginSignUpTests/Pods-loginSignUp-loginSignUpTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D74D94F245D7D6C00F81E4E /* libRNVectorIcons.a in Frameworks */,
 				32F33C1AC698763D2B86B6CC /* libPods-loginSignUp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +161,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6D74D94E245D7D6C00F81E4E /* libRNVectorIcons.a */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				E48EE0A23E6DA13E60393DED /* libPods-loginSignUp.a */,
@@ -149,9 +172,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6D74D941245D7B4200F81E4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D74D946245D7B4200F81E4E /* libRNVectorIcons.a */,
+				6D74D948245D7B4200F81E4E /* libRNVectorIcons-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				6D74D940245D7B4200F81E4E /* RNVectorIcons.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -159,6 +192,8 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				6D74D94C245D7C6100F81E4E /* MaterialIcons.ttf */,
+				6D74D94A245D7C4600F81E4E /* Ionicons.ttf */,
 				13B07FAE1A68108700A75B9A /* loginSignUp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* loginSignUpTests */,
@@ -194,7 +229,6 @@
 				DADC78214C53CD88FC381CCA /* Pods-loginSignUp-tvOSTests.debug.xcconfig */,
 				82F57645AD208C0EB9056401 /* Pods-loginSignUp-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -316,6 +350,12 @@
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6D74D941245D7B4200F81E4E /* Products */;
+					ProjectRef = 6D74D940245D7B4200F81E4E /* RNVectorIcons.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* loginSignUp */,
@@ -325,6 +365,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6D74D946245D7B4200F81E4E /* libRNVectorIcons.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNVectorIcons.a;
+			remoteRef = 6D74D945245D7B4200F81E4E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6D74D948245D7B4200F81E4E /* libRNVectorIcons-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRNVectorIcons-tvOS.a";
+			remoteRef = 6D74D947245D7B4200F81E4E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {
@@ -338,8 +395,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D74D94D245D7C6100F81E4E /* MaterialIcons.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				6D74D94B245D7C4600F81E4E /* Ionicons.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
