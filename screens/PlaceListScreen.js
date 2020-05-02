@@ -1,40 +1,32 @@
 import React from 'react';
-import {View, Text} from 'react-native';
-import {Icon} from 'react-native-elements';
-import {
-  HeaderButtons,
-  HeaderButton,
-  Item,
-} from 'react-navigation-header-buttons';
+import {View, Text, Platform} from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
+import {HeaderButtons, Item} from 'react-navigation-header-buttons';
+import HeaderButton from '../components/HeaderButton';
 
 export default function PlaceListScreen() {
   return (
     <View style={{flex: 1}}>
       <Text>PlaceListScreen</Text>
-      <Icon name="rowing" />
-
-      <Icon name="g-translate" color="#00aced" />
-
-      <Icon name="sc-telegram" type="evilicon" color="#517fa4" />
-
-      <Icon
-        reverse
-        name="ios-american-football"
-        type="ionicon"
-        color="#517fa4"
-      />
-
-      <Icon
-        raised
-        name="heartbeat"
-        type="font-awesome"
-        color="#f50"
-        onPress={() => console.log('hello')}
-      />
     </View>
   );
 }
 
-PlaceListScreen.navigationOptions = {
-  headerTitle: 'All Places',
+//here Navadata added to make navigation options to dynamic
+
+PlaceListScreen.navigationOptions = navData => {
+  return {
+    headerTitle: 'All Places',
+    headerRight: (
+      <HeaderButtons HeaderButtonComponent={HeaderButton}>
+        <Item
+          title="Add Place"
+          iconName={Platform.OS === 'android' ? 'md-add' : 'ios-add'}
+          onPress={() => {
+            navData.navigation.navigate('NewPlace');
+          }}
+        />
+      </HeaderButtons>
+    ),
+  };
 };
