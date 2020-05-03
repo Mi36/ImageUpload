@@ -1,10 +1,10 @@
 import React from 'react';
 import {View, Text, Platform} from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
 import {HeaderButtons, Item} from 'react-navigation-header-buttons';
 import HeaderButton from '../components/HeaderButton';
 
 export default function PlaceListScreen() {
+  console.log('aaaa');
   return (
     <View style={{flex: 1}}>
       <Text>PlaceListScreen</Text>
