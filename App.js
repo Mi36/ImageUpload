@@ -1,9 +1,22 @@
 import React from 'react';
-import {View, Text} from 'react-native';
 import PlaceNavigation from './navigation/PlacesNavigation';
+import {createStore, combineReducers, applyMiddleware} from 'redux';
+import {Provider} from 'react-redux';
+import ReduxThunk from 'redux-thunk';
+import placeReducer from './store/places-reducer';
+
+const rootReducer = combineReducers({
+  place: placeReducer,
+});
+
+const store = createStore(rootReducer, applyMiddleware(ReduxThunk));
 
 export default function App() {
-  return <PlaceNavigation />;
+  return (
+    <Provider store={store}>
+      <PlaceNavigation />
+    </Provider>
+  );
 }
 
 // import React, { Component } from 'react';

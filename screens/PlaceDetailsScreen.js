@@ -8,3 +8,9 @@ export default function PlaceDetailsScreen() {
     </View>
   );
 }
+
+PlaceDetailsScreen.navigationOptions = navData => {
+  return {
+    headerTitle: navData.navigation.getParam('placeTitle'),
+  };
+};
