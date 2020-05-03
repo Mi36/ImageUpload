@@ -128,6 +128,9 @@ def jscFlavor = 'org.webkit:android-jsc:+'
 def enableHermes = project.ext.react.get("enableHermes", false);
 
 android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+    
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     compileOptions {
@@ -138,9 +141,11 @@ android {
     defaultConfig {
         applicationId "com.loginsignup"
         minSdkVersion rootProject.ext.minSdkVersion
+         targetSdkVersion 27
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
     }
     splits {
         abi {
