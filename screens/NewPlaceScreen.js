@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -10,6 +10,14 @@ import {
 import Colors from '../constant/Colors';
 
 export default function NewPlaceScreen(props) {
+  const [titleValue, setTitleValue] = useState(null);
+  const titleValueHandler = text => {
+    // we can add validation here
+    //text is passed to there by default
+
+    setTitleValue(text);
+  };
+
   return (
     <ScrollView>
       <View style={{flex: 1, margin: 30}}>
@@ -24,6 +32,8 @@ export default function NewPlaceScreen(props) {
             height: '29%',
             paddingLeft: 9,
           }}
+          onChangeText={titleValueHandler}
+          value={titleValue}
         />
         <Button title="Save Place" color={Colors.primary} onPress={() => {}} />
       </View>
