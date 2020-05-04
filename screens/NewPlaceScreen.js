@@ -11,6 +11,7 @@ import Colors from '../constant/Colors';
 import {useDispatch} from 'react-redux';
 import * as placeActions from '../store/places-action';
 import {useSelector} from 'react-redux';
+import ImageSelector from '../components/ImageSelector';
 
 export default function NewPlaceScreen(props) {
   const places = useSelector(state => state.place.places);
@@ -23,9 +24,14 @@ export default function NewPlaceScreen(props) {
     // setTitleValue(event.nativeEvent.text);
     setTitleValue(text);
   };
+  const [selectedImage, setSelectedImage] = useState(null);
   const saveItemHandler = () => {
-    dispatch(placeActions.addPlace(titleValue));
+    dispatch(placeActions.addPlace(titleValue, selectedImage));
     props.navigation.goBack();
+  };
+
+  const imageSelectedHandler = imagePath => {
+    setSelectedImage(imagePath);
   };
 
   return (
@@ -39,12 +45,13 @@ export default function NewPlaceScreen(props) {
             borderColor: 'grey',
             borderWidth: 1,
             marginBottom: 12,
-            height: '29%',
+            height: '10%',
             paddingLeft: 9,
           }}
           onChangeText={titleValueHandler}
           value={titleValue}
         />
+        <ImageSelector onImageSelected={imageSelectedHandler} />
         <Button
           title="Save Place"
           color={Colors.primary}

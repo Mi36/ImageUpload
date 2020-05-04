@@ -14,7 +14,8 @@ export default function PlaceListScreen(props) {
       keyExtractor={item => item.id}
       renderItem={itemData => (
         <PlaceItem
-          // image={null}
+          image={itemData.item.imageUri}
+          // this is the way it stored in our model
           title={itemData.item.title}
           address={null}
           onSelect={() => {
