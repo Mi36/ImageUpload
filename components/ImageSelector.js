@@ -13,7 +13,6 @@ const ImageSelector = props => {
       freeStyleCropEnabled: true,
       // hideBottomControls: true,
     }).then(image => {
-      console.log(image);
       setImage(image.path);
       props.onImageSelected(image.path);
     });

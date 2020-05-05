@@ -1,13 +1,18 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {View, Text, Platform, FlatList, StyleSheet} from 'react-native';
 import {HeaderButtons, Item} from 'react-navigation-header-buttons';
 import HeaderButton from '../components/HeaderButton';
 import {useSelector} from 'react-redux';
 import PlaceItem from '../components/PlaceItem';
+import * as placeActions from '../store/places-action';
+import {useDispatch} from 'react-redux';
 
 export default function PlaceListScreen(props) {
   const places = useSelector(state => state.place.places);
-  console.log('places', places);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(placeActions.loadPlace());
+  }, [dispatch]);
   return (
     <FlatList
       data={places}
@@ -35,7 +40,7 @@ export default function PlaceListScreen(props) {
 PlaceListScreen.navigationOptions = navData => {
   return {
     headerTitle: 'All Places',
-    headerRight: (
+    headerRight: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
           title="Add Place"

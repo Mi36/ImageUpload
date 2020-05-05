@@ -15,7 +15,6 @@ import ImageSelector from '../components/ImageSelector';
 
 export default function NewPlaceScreen(props) {
   const places = useSelector(state => state.place.places);
-  console.log('places', places);
   const dispatch = useDispatch();
   const [titleValue, setTitleValue] = useState(null);
   const titleValueHandler = text => {
